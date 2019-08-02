@@ -1,13 +1,16 @@
 package wechat
 
 import (
-	"apple/config"
-	"fmt"
+	"apple/utils"
+	"math/rand"
 	"testing"
+	"time"
 )
 
 func TestGetWechatAccessToken(t *testing.T) {
-	fmt.Println(config.ConfigInstance.MysqlConfig)
+	rand.Seed(time.Now().Unix())
+	print(utils.RanString(32))
+
 }
 
 

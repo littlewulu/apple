@@ -4,9 +4,13 @@ import (
 	"apple/config"
 	"apple/controller"
 	"github.com/gin-gonic/gin"
+	"math/rand"
+	"time"
 )
 
 func init(){
+	rand.Seed(time.Now().Unix())
+
 	if !config.ConfigInstance.IsDebug{
 		gin.SetMode(gin.ReleaseMode)
 	}
